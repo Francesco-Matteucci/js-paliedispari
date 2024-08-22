@@ -12,23 +12,12 @@
 
 <body>
     <div class="game-wrapper">
-        <h1>Giochiamo a Pari o Dispari</h1>
+        <h1>Seleziona un Gioco</h1>
         <div class="game-container">
-            <form id="gameform">
-                <label for="choice">Scegli:</label>
-                <select id="choice" name="choice">
-                    <option value="pari">Pari</option>
-                    <option value="dispari">Dispari</option>
-                </select>
-                <label for="usernumber">Inserisci un numero (da 1 a 5):</label>
-                <input type="number" id="usernumber" name="usernumber" min="1" max="5" required>
-                <button type="submit">Gioca</button>
-            </form>
-            <div id="result" class="hidden"></div>
+            <a href="palindrome/palindrome.html" class="button-link">Parole Palindrome</a>
+            <a href="even-odd/evenodd.html" class="button-link">Gioca a Pari e Dispari</a>
         </div>
     </div>
-
-    <script src="js/even-odd.js"></script>
 </body>
 
 </html>
