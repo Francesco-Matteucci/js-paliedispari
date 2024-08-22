@@ -1,25 +1,27 @@
 //!Esercizio 1
-//Chiedo all'utente una parola
-const word = prompt("Inserisci una parola, ti dirò se palindroma!").trim();
-
-//Creo una funzione per stabilire se la parola è palindroma
+//Creo una funzione per determinare se una parola è palindroma
 function isPalindrome(word) {
-
-    //tolgo le eventuali lettere maiuscole dalla parola
     const lowerCaseWord = word.toLowerCase();
-
-
-    //Inverto i caratteri della parola data e la riporto in stringa
     const reverseWord = lowerCaseWord.split('').reverse().join('');
-
-    //Eseguo un controllo sulla parola data e la parola invertita, per verificare che siano uguali
     return lowerCaseWord === reverseWord;
 }
 
+//Recupero gli elementi dal DOM
+const palindromeForm = document.getElementById('palindromeform');
+const wordInput = document.getElementById('wordinput');
+const result = document.getElementById('result');
 
-//Call alla funzione e invio un messaggio all'utente tramite alert
-if (isPalindrome(word)) {
-    alert(`La parola "${word}" è palindroma!`);
-} else {
-    alert(`La parola "${word}" non è palindroma.`);
-}
+// Aggiungo un evento listener al submit del form nel DOM
+palindromeForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const word = wordInput.value.trim();
+
+    if (isPalindrome(word)) {
+        result.className = 'win';
+        result.innerText = `La parola "${word}" è palindroma!`;
+    } else {
+        result.className = 'lose';
+        result.innerText = `La parola "${word}" non è palindroma.`;
+    }
+});

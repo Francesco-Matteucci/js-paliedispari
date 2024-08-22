@@ -4,17 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pali e Dispari</title>
+    <title>Parole Palindrome</title>
     <!-- STYLES -->
     <!-- main style -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <div>
+    <div class="game-wrapper">
+        <h1>Verifica Palindromo</h1>
+        <div class="game-container">
+            <form id="palindromeform">
+                <label for="wordinput">Inserisci una parola:</label>
+                <input type="text" id="wordinput" name="wordinput" required>
+                <button type="submit">Verifica</button>
+            </form>
+            <div id="result"></div>
+        </div>
         <a href="../index.html" class="button-link">Torna alla Home</a>
-    </div>
-    <script src="../js/palindrome.js"></script>
+
+        <script src="../js/palindrome.js"></script>
 </body>
 
 </html>
