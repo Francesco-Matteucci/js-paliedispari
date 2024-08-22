@@ -23,9 +23,7 @@ body {
     padding: 30px;
     text-align: center;
     width: 350px;
-    position: relative;
     overflow: hidden;
-
 }
 
 h1 {
@@ -96,12 +94,6 @@ a.button-link:hover {
     background-color: #c0392b;
     transform: scale(1.05);
 }
-
-a.button-link:active {
-    background-color: #1f618d;
-}
-
-
 
 #result {
     width: calc(100% - 40px);

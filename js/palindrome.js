@@ -13,10 +13,14 @@ const result = document.getElementById('result');
 
 // Aggiungo un evento listener al submit del form nel DOM
 palindromeForm.addEventListener('submit', function (event) {
+
+    // Prevengo il ricaricamento della pagina al click, avendo utilizzato submit
     event.preventDefault();
 
+    //creo una costante per prendere la parola scelta dall'utente, eliminando eventuali spazi
     const word = wordInput.value.trim();
 
+    //Dichiaro se la parola è palindroma o meno, stampando sul Dom il risultato per l'utente
     if (isPalindrome(word)) {
         result.className = 'win';
         result.innerText = `La parola "${word}" è palindroma!`;
